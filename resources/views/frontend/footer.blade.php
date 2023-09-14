@@ -5,7 +5,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Mentor</h3>
+            <h3>XYZ</h3>
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
@@ -53,10 +53,10 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>XYZ</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a href="">XYZ School of Science</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

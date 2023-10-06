@@ -167,14 +167,14 @@
 
         <li class="nav-item dropdown pe-3">
 
+          <!-- profile and user information -->
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-          </a><!-- End Profile Iamge Icon -->
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{ auth()->user()->name }}</span>
+          </a>
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
+              <h6>{{ auth()->user()->name }}</h6>
               <span>Web Designer</span>
             </li>
             <li>
@@ -202,7 +202,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+              <a class="dropdown-item d-flex align-items-center" href="">
                 <i class="bi bi-question-circle"></i>
                 <span>Need Help?</span>
               </a>
@@ -212,10 +212,16 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
+              
+              <form class="dropdown-item d-flex align-items-center" method="POST" action="{{ route('logout') }}">
+                @csrf
+                <a :href="route('logout')"
+                        onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                    <i class="fa fa-sign-out"></i>
+                    {{ __('Log Out') }}
+                </a>
+              </form>
             </li>
 
           </ul><!-- End Profile Dropdown Items -->
